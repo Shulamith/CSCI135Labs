@@ -1,0 +1,51 @@
+* Please fill out this section:
+** Name: 
+** GitHub username:
+
+* Lab 06
+
+* File structure:
+- README.org - this file. fill out the top and use it for notes
+- Makefile
+- main.cpp - main driver
+- funcs.h / funcs.cpp -- add your functions here.
+- test.cpp - add your tests
+- doctest.h - testing library
+
+The full text of the 136 version of the lab can be found here:
+https://maryash.github.io/135/labs/lab_06.html
+
+
+* Overall notes:
+- Write your functions in funcs.cpp
+- Write your tests in test.cpp
+- I will test your program by running ~make test~ then ~./test~
+- Don't add .o, executable or any extraneous files to the repo
+- You should commit and push your work frequently
+- make sure to add sufficient tests to show that everything works
+ 
+* Specifc changes to the lab
+** Overall changes
+- You do not have to download the sample image. It is in the repo and
+  named *test_image.pgm*.
+- The two functions in *lab-images.cpp* are already in *funcs.cpp* and
+  *funcs.h* but have an additional first parameter - ~std::string
+  filename~ so that you can load and save different image files
+  easily. The sample code is already in ~main.cpp~. 
+** Tests
+- This lab does not require doctests.
+** All the tasks.
+
+For each task, write a function that creates an output image
+illustrating that it works. The output filenames should be:
+- *taska.pgm*
+- *taskb.pgm*
+- *taskc.pgm*
+- etc.
+
+Running ./main should create all these image files with no user input.
+** Final note on image files
+If you are using another image for any of the tasks, make sure to add
+it to the repo.
+
+Link: https://maryash.github.io/135/labs/lab_08.html
