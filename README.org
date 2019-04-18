@@ -1,8 +1,8 @@
 * Please fill out this section:
-** Name: 
-** GitHub username:
+** Name: Shulamith Dashevsky
+** GitHub username:Shulamith
 
-* Lab 06
+* Lab 08
 
 * File structure:
 - README.org - this file. fill out the top and use it for notes
