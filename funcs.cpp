@@ -2,18 +2,14 @@
 #include <iostream>
 
 
+
 // Sample function
 
-std::string greet(std::string name){
-  return "Hello "+name+"!";
-}
-
-
+// std::string greet(std::string name){
+//   return "Hello "+name+"!";
+// }
+//using namespace std;
 // Provided functions
-
-
-using namespace std;
-
 // Reads a PGM file.
 // Notice that: height and width are passed by reference!
 void readImage(std::string filename, int image[MAX_H][MAX_W], int &height, int &width) {
@@ -56,16 +52,16 @@ void writeImage(std::string filename,int image[MAX_H][MAX_W], int height, int wi
   ofstream ostr;
   ostr.open(filename);
   if (ostr.fail()) {
-    cout << "Unable to write file\n";
+    std::cout << "Unable to write file\n";
     exit(1);
   };
 
   // print the header
-  ostr << "P2" << endl;
+  ostr << "P2" << std::endl;
   // width, height
   ostr << width << ' ';
-  ostr << height << endl;
-  ostr << 255 << endl;
+  ostr << height << std::endl;
+  ostr << 255 << std::endl;
 
 
   for (int row = 0; row < height; row++) {
@@ -73,15 +69,27 @@ void writeImage(std::string filename,int image[MAX_H][MAX_W], int height, int wi
       assert(image[row][col] < 256);
       assert(image[row][col] >= 0);
       ostr << image[row][col] << ' ';
-      ostr << endl;
+      ostr << std::endl;
     }
   }
   ostr.close();
   return;
 }
 
+int invert(int color){ //this func shud recieves just one color value //not sure if it was best to split this
+return (255-color);
+}
+int invert_image(int img, int height, int width){
+  int inverted_img[height][width];
+  for (int row= 0; i < height; row++) {
+    for (int col= 0; i < width; col++) {
+      inverted_img[row][col] = invert(img[row][col]);
+
+    }
+    /* code */
+  }
+}
 
 
 
 // Write all your functions in here
-
