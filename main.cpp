@@ -3,12 +3,18 @@
 #include "doctest.h"
 #include "funcs.h"
 
+
 int main()
 {
 
   // sample code
 
-
+  invert();
+  invert_half();
+  box();
+  frame();
+  scale();
+  pixelate();
   int img[MAX_H][MAX_W];
   int h, w;
   readImage("test_image.pgm",img, h, w); // read it from the file "inImage.pgm"
@@ -29,6 +35,7 @@ int main()
 
   // and save this new image to file "outImage.pgm"
   writeImage("test_out.pgm",out, h, w);
+
 
 return 0;
 }
